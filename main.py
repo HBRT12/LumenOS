@@ -8,9 +8,8 @@ for module in os.listdir('./modules'):
         module_to_load = module[:-3]  # Removing the .py at the end
         try:
             mod = importlib.import_module('modules.' + module_to_load)
-
-            if hasattr(mod, 'main'):
-                mod.register_commands(commands)
+            if hasattr(mod, 'register_command'):  # Checks if python file has module loader
+                mod.register_command(commands)  # Runs register command (adds help prompts and main function to the commands dictionary)
                 print(f'[  OK  ]Loaded module: {module_to_load}')
         except Exception as e:
             print(f'[ FAIL ]Failed to load module: {module_to_load}. {e}')
