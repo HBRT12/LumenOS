@@ -1,3 +1,5 @@
+# THIS CODE IS UNFINISHED  
+
 # What is LumenOS
 LumenOS is the project that I have decided to remake for the 3rd time now for the sake of making the code more readable and organised as my skills with python have increased. This new version is the one in which I plan to work on long-term.
 
@@ -8,6 +10,6 @@ The other versions of LumenOS that I have made (as cool as they may be consideri
 • Version 3 (This repo) - Still in development but I hope it turns out way better since I have learnt modules such as importlib and I have learnt how to use string features such as .split(), which will let me allow arguments to be inputted in the same line as the command and not as inputs inside the function  
 
 # The Goals
-• Impress Mr Duncan  
+• Impress my computing teacher 
 • Get more familiar with using multiple Python files for one project  
 • I want more green squares on my github profile
