@@ -10,6 +10,6 @@ The other versions of LumenOS that I have made (as cool as they may be consideri
 • Version 3 (This repo) - Still in development but I hope it turns out way better since I have learnt modules such as importlib and I have learnt how to use string features such as .split(), which will let me allow arguments to be inputted in the same line as the command and not as inputs inside the function  
 
 # The Goals
-• Impress my computing teacher 
+• Impress my computing teacher  
 • Get more familiar with using multiple Python files for one project  
-• I want more green squares on my github profile
+• I want more green squares on my github profile  
