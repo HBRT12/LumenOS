@@ -13,3 +13,7 @@ The other versions of LumenOS that I have made (as cool as they may be consideri
 • Impress my computing teacher  
 • Get more familiar with using multiple Python files for one project  
 • I want more green squares on my github profile  
+
+<br><br>
+This repository is public for contribution visibility only.  
+All rights reserved. No permission is granted to reuse or redistribute the code.
