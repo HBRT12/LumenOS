@@ -1,9 +1,8 @@
 # Adds command and relevant info to commands dictionary
 def register_command(commands):
     commands['beam'] = {
-        'command': 'beam',
-        'brief description': 'prints inputted arguments',
-        'detailed description': '''Any argument given in the command will be printed to the screen.
+        'brief': 'prints inputted arguments',
+        'detailed': '''Any argument given in the command will be printed to the screen.
         
         Tags
         -rw: The arguments given will be printed in reverse order by word.
@@ -35,4 +34,4 @@ def beam_main(arguments):  # Main function for the beam command
     elif arguments[0] == '-i':
         arguments.pop(0) # Removes the -i tag and ignores everything else to allow tags to be saved
 
-    return result
+    print(result)
