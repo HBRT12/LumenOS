@@ -1,4 +1,5 @@
-def register_command(commands):  # This function adds itself to the dictionary that holds the rest of their commands and their relevant info
+# Adds command and relevant info to commands dictionary
+def register_command(commands):
     commands['beam'] = {
         'command': 'beam',
         'brief description': 'prints inputted arguments',
