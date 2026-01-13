@@ -10,7 +10,7 @@ def register_command(commands):
         -i: Any tags given after this tag will 
         
         Formatting
-        beam [tag if used] [arguments]
+        beam <tag> <arguments>
         
         Example
         beam -rw This is a test
