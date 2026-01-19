@@ -3,8 +3,8 @@ import json
 
 def register_command(commands):
     commands['load'] = {
-        'brief description': 'loads the configuration from a file',
-        'detailed description': '''Loads the configuration settings from a JSON file named 'config.json'.
+        'brief': 'loads the configuration from a file',
+        'detailed': '''Loads the configuration settings from a JSON file named 'config.json'.
         
         Usage
         load''',

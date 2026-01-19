@@ -3,9 +3,9 @@ import json
 
 def register_command(commands):
     commands['save'] = {
-        'brief description': 'saves the current configuration to a file',
-        'detailed description': '''Saves the current configuration settings to a JSON file named 'config.json'.
- 
+        'brief': 'saves the current configuration to a file',
+        'detailed': '''Saves the current configuration settings to a JSON file named 'config.json'.
+        
         Usage
         save''',
         'func': save_main
