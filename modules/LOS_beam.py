@@ -12,7 +12,7 @@ def register_command(commands):
         Formatting
         beam <tag> <arguments>
         
-        Example
+        Usage
         beam -rw This is a test
         beam Hello, world!''',
         'func': beam_main
