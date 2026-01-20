@@ -18,8 +18,16 @@ def help_main(arguments, commands):
         for each in commands:
             print(f'{each}: {commands[each]["brief"]}')
     elif arguments[0] == '-d':
-        arguments.pop(0)
-        print(commands[arguments[0]]["detailed"])
+        if len(arguments) >= 2:
+            arguments.pop(0)
+            for each in arguments:
+                try:
+                    print(commands[each]["detailed"])
+                except KeyError:
+                    print(f"[FAIL] {each} is not a valid command or has not been registered")
+        else:
+            for each in commands:
+                print(f"{each}: {commands[each]["detailed"]}\n\n")
     else:
         arguments.pop(0)
         print(commands[arguments[0]]["brief"])
