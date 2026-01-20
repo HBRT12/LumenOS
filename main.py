@@ -17,26 +17,34 @@ def loginscreen():
 def boot():
     print("Welcome to LumenOS!\n\n[INFO]Loading modules...")
     time.sleep(1)
-    for module in os.listdir('./modules'):  # Lists all files in the modules folder
-        if module.startswith('LOS') and module.endswith('.py'):
+    for module in os.listdir("./modules"):  # Lists all files in the modules folder
+        if module.startswith("LOS") and module.endswith(".py"):
             module_to_load = module[:-3]  # Removing the .py at the end
             try:
-                mod = importlib.import_module('modules.' + module_to_load)
-                if hasattr(mod, 'register_command'):  # Checks if python file has module loader
+                mod = importlib.import_module("modules." + module_to_load)
+                if hasattr(mod, "register_command"):  # Checks if python file has module loader
                     mod.register_command(commands)  # Runs register command (adds help prompts and main function to the commands dictionary)
-                    print(f'[ OK ]Loaded module: {module_to_load}')
+                    print(f"[ OK ]Loaded module: {module_to_load}")
                 else:
-                    print(f'[FAIL]Module {module_to_load} does not have a register_command function.')
+                    print(f"[FAIL]Module {module_to_load} does not have a register_command function.")
             except Exception as e:
-                print(f'[FAIL]Failed to load module: {module_to_load}. {e}')
+                print(f"[FAIL]Failed to load module: {module_to_load}. {e}")
         time.sleep(0.05)  # Small delay for better readability
-    print(f'\n\n[INFO]Total modules loaded: {len(commands)}')
+    print(f"[INFO]Total modules loaded: {len(commands)}\n\n")
+
+    try:
+        print("[INFO]Attempting to load config...")
+        time.sleep(0.5)
+        config = commands["load"]["func"]
+        print("[ OK ]Config loaded successfully!")
+    except Exception as e:
+        print(f"[FAIL]Failed to load config: {e}")
     time.sleep(2)  # Delay for 2 seconds before starting main loop
     main()
 
 def main():
     while True:
-        commands_input = input('LumenOS> ').strip().split()  # Gets user input and splits it into a list
+        commands_input = input("LumenOS> ").strip().split()  # Gets user input and splits it into a list
         if len(commands_input) == 0:
             pass  # If no input is given, do nothing
         else:
@@ -44,10 +52,10 @@ def main():
             arguments = commands_input[1:]  # The rest are arguments
             if command_to_run in commands:  # Checks if command exists in commands dictionary
                 try:
-                    commands[command_to_run]['func'](arguments, commands)  # Runs the main function of the command
+                    commands[command_to_run]["func"](arguments, commands)  # Runs the main function of the command
                 except TypeError:
-                    commands[command_to_run]['func'](arguments)  # Runs the main function of the command
+                    commands[command_to_run]["func"](arguments)  # Runs the main function of the command
                 except Exception as e:
-                    print(f'[ERROR]An error occurred while executing the command: {e}')
+                    print(f"[ERROR]An error occurred while executing the command: {e}")
 
 boot()
