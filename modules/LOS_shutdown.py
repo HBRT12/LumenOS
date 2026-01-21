@@ -19,6 +19,8 @@ def register_command(commands):
 
 def shutdown_main(arguments, commands):
     if arguments[0] == "-ns":
+        print("Thank you for using LumenOS!\n\nShutting down...")
+        time.sleep(2)
         sys.exit()
     else:
         try:
