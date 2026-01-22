@@ -1,6 +1,6 @@
 def register_command(commands):
     commands['version'] = {
-        'brief': 'displays the current version of LumenOS',
+        'brief': 'Displays the current version of LumenOS',
         'detailed': '''Displays the current version of LumenOS.
 
         Usage
@@ -8,5 +8,5 @@ def register_command(commands):
         'func': version_main
     }
 
-def version_main():
+def version_main(arguments):
     print("LumenOS v0.5.2 Alpha")
