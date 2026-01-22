@@ -3,12 +3,12 @@ import json
 
 def register_command(commands):
     commands['load'] = {
-        'brief': 'loads the configuration from a file',
-        'detailed': '''Loads the configuration settings from a JSON file named 'config.json'.
-        
-        Usage
-        load''',
-        'func': load_main
+    'brief': 'loads the configuration from a file',
+    'detailed': '''Loads the configuration settings from a JSON file named 'config.json'.
+    
+    Usage
+    load''',
+    'func': load_main
     }
 
 def load_main():

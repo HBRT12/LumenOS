@@ -2,14 +2,14 @@ def register_command(commands):
     commands['help'] = {
         'brief': 'Displays all commands or information about a specific command',
         'detailed': '''The help command displays all commands unless a command is specified as an argument.
-        
-        Tags:
-        -d: Gives the detailed description of the specified command.
-        
-        Usage:
-        help
-        help <command>
-        help <tag> <command>''',
+    
+    Tags:
+    -d: Gives the detailed description of the specified command.
+    
+    Usage:
+    help
+    help <command>
+    help <tag> <command>''', 
         'func': help_main
     }
 

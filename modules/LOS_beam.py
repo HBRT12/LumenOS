@@ -1,21 +1,21 @@
 # Adds command and relevant info to commands dictionary
 def register_command(commands):
     commands['beam'] = {
-        'brief': 'prints inputted arguments',
-        'detailed': '''Any argument given in the command will be printed to the screen.
-        
-        Tags
-        -rw: The arguments given will be printed in reverse order by word.
-        -rc: The arguments given will be printed in reverse order by character.
-        -i: Any tags given after this tag will 
-        
-        Formatting
-        beam <tag> <arguments>
-        
-        Usage
-        beam -rw This is a test
-        beam Hello, world!''',
-        'func': beam_main
+    'brief': 'prints inputted arguments',
+    'detailed': '''Any argument given in the command will be printed to the screen.
+    
+    Tags
+    -rw: The arguments given will be printed in reverse order by word.
+    -rc: The arguments given will be printed in reverse order by character.
+    -i: Any tags given after this tag will 
+    
+    Formatting
+    beam <tag> <arguments>
+    
+    Usage
+    beam -rw This is a test
+    beam Hello, world!''',
+    'func': beam_main
     }
 
 def beam_main(arguments):  # Main function for the beam command
