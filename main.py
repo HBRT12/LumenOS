@@ -28,7 +28,7 @@ def boot():
                 else:
                     print(f"[ERROR]  Module {module_to_load} does not have a register_command function.")
             except Exception as e:
-                print(f"[ERROR]  ERRORed to load module: {module_to_load}. {e}")
+                print(f"[ERROR]  Failed to load module: {module_to_load}. {e}")
         time.sleep(0.05)  # Small delay for better readability
     print(f"[INFRM]  Total modules loaded: {len(commands)}\n\n")
 
