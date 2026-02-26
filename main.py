@@ -36,7 +36,7 @@ def boot():
         print("[INFRM]  Attempting to load config...")
         time.sleep(0.5)
         config = commands["load"]["func"]
-        print("[ OK! ]  Config loaded successfully!")
+        print("[ OK! ]  Config loaded successfully!")  # Provides message for config loading state
     except Exception as e:
         print(f"[ERROR]  ERRORed to load config: {e}")
     time.sleep(2)  # Delay for 2 seconds before starting main loop
